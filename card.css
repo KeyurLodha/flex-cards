@@ -1,0 +1,114 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;800;900&display=swap"); */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Helvetica";
+  --card-title-color: hsl(0, 0%, 7%);
+  --card-desc-color: hsl(0, 0%, 51%);
+
+  --title-font-weight: 800;
+  --desc-font-weight: 500;
+
+  --card-main-color: white;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+.container {
+  max-width: 100em;
+  display: flex;
+  /*   axis is row wise and runs from left to right */
+  /*   wrap allows element to be wrapped  */
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin: auto;
+  min-height: 30em;
+  padding: 3em 1em 3em 1em;
+  box-sizing: border-box;
+}
+
+/* Card Styling */
+.card-div {
+  width: 20em;
+  min-height: 25em;  
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: center;
+  background-color: var(--card-main-color);
+  margin: 0.6em;
+  box-sizing: border-box;
+  border-radius: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: transform 0.2s ease-in-out;
+  /*   background-color: blue; */
+}
+
+/* ======== General styling of all cards and heart divs ========== */
+.img-div {
+  width: 100%;
+  /*   height: 100%; */
+  /*   min-height: 10em; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  /* padding-bottom: 0.5rem; */
+  /*   z-index: 1; */
+  /*   border-radius: 0 0 10px 10px; */
+  /*   background-color: red; */
+}
+
+.img-div img {
+  width: 65%;
+}
+
+/* ======== text Container Styling general ======== */
+
+.text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1 1.5em;
+  /* padding-top: 1em;
+  padding-bottom: 1em; */
+  box-sizing: border-box;
+  /*   background-color: green; */
+}
+
+.text-container .card-title,
+.text-container .card-desc {
+  margin: 0.25em 0;
+  text-align: center;
+  /*   background-color: pink; */
+}
+
+.text-container .card-title {
+  font-size: 1.6em;
+  font-weight: var(--title-font-weight);
+  color: var(--card-title-color);
+}
+
+.text-container .card-desc {
+  font-size: 0.9em;
+  font-weight: var(--desc-font-weight);
+  color: var(--card-desc-color);
+  padding-top: 1em;
+}
+
+/* ====== Hover effects ======= */
+.card-div:hover {
+  transform: translate(0, -10px);
+  border: 0.5px solid grey;
+}
